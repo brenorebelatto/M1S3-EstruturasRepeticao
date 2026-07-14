@@ -8,13 +8,23 @@
 //     resultado = 2 * tabuada;
 // }
 
-int i = 0;
+// int i = 0;
 
- Console.WriteLine("Digite um número entre 1 e 10: ");
-    i = int.Parse(Console.ReadLine());
+//  Console.WriteLine("Digite um número entre 1 e 10: ");
+//     i = int.Parse(Console.ReadLine());
 
-while(i < 1 || i > 10)
+// while(i < 1 || i > 10)
+// {
+//     Console.WriteLine("Número indisponível, insira novamente:");
+//     i = int.Parse(Console.ReadLine());
+// }
+
+Console.WriteLine("Digite um numero: ");
+bool ehNumero = int.TryParse(Console.ReadLine(), out int num);
+while (!ehNumero)
 {
-    Console.WriteLine("Número indisponível, insira novamente:");
-    i = int.Parse(Console.ReadLine());
+    Console.WriteLine("Entrada inválida, Digite um numero: ");
+    ehNumero = int.TryParse(Console.ReadLine(), out  num);
 }
+
+Console.WriteLine("O número digitado é: " + num);
