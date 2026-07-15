@@ -19,12 +19,24 @@
 //     i = int.Parse(Console.ReadLine());
 // }
 
-Console.WriteLine("Digite um numero: ");
-bool ehNumero = int.TryParse(Console.ReadLine(), out int num);
-while (!ehNumero)
+// Console.WriteLine("Digite um numero: ");
+// bool ehNumero = int.TryParse(Console.ReadLine(), out int num);
+// while (!ehNumero)
+// {
+//     Console.WriteLine("Entrada inválida, Digite um numero: ");
+//     ehNumero = int.TryParse(Console.ReadLine(), out  num);
+// }
+
+// Console.WriteLine("O número digitado é: " + num);
+
+Console.WriteLine("Digite o número para verificar o fatorial: ");
+int num = int.Parse(Console.ReadLine());
+
+int fatorial = 1;
+
+for (int i = 1; i <= num; i++)
 {
-    Console.WriteLine("Entrada inválida, Digite um numero: ");
-    ehNumero = int.TryParse(Console.ReadLine(), out  num);
+    fatorial = fatorial * i;
 }
 
-Console.WriteLine("O número digitado é: " + num);
+Console.WriteLine($"O fatorial de {num} é {fatorial}");
